@@ -1,0 +1,99 @@
+body {
+  background: #607D8B
+}
+.text-brown {
+  color: #795548;
+}
+#app {
+  background: white;
+  position: relative;
+  width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-bottom:60px;
+}
+.navbar {
+  width: 480px;
+  position: fixed;
+  bottom: 0;
+  display: block
+}
+.nav-home {
+  padding: 15px 20px;
+}
+h3.page-title {
+  font-weight: bold;
+  padding: 15px 10px;
+}
+.menu-wrapper {
+  margin: 10px;
+}
+.menu-section-title {
+  width: 100%;
+  padding: 0 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.menu-name {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.menu.card .card-body{
+  padding: 0.5rem;
+}
+.cart-badge {
+  font-size: .5em;
+  position: absolute;
+  bottom:0;
+}
+#cart_num_menu.cart-badge {
+  font-size: .5em;
+  position: absolute;
+  bottom:15px;
+}
+.btn-back {
+  font-size: 1.75rem;
+  padding: 10px;
+}
+#order-btn {
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom:0;
+  width: inherit;
+  padding: 15px;
+}
+#order-btn button {
+  font-weight: bold;
+}
+.btn-cart-action {
+  font-size: .2rem
+}
+.profile-photo {
+  width: 80px;
+  margin:0 auto;
+}
+.profile-photo img {
+  width: 80px;
+  border-radius: 50%;
+}
+.acc-name {
+  font-weight: bold;
+  font-size: 1rem
+}
+.loader {
+  height: 100vh;
+  width: inherit;
+  position: fixed;
+  top:0;
+}
+.spinner-wrapper {
+  margin-top: 40vh;
+  font-size: 2rem;
+}
+@media (max-width: 480px){
+  #app, .navbar {
+    width: 100%
+  }
+}
