@@ -5,6 +5,8 @@ let menu = [
 	{ id: 4, nama: 'Teh Hangat', kategori: 'drink', harga: 4000, foto: 'hangattea.jpg'},
 	{ id: 5, nama: 'Jus Jeruk', kategori: 'drink', harga: 6000, foto: 'esjeruk.jpg'},
 	{ id: 6, nama: 'Jus Nanas', kategori: 'drink', harga: 7000, foto: 'jusnanas.jpg'}
+	// { id: 7, nama: 'Pancakes', kategori: 'snack', harga: 9090, foto: 'PancakesandSausages.png'},
+	// { id: 8, nama: 'Chicken Nugget', kategori: 'snack', harga: 9090, foto: 'ChickenNuggets.png'}
 ]
 
 let user = {}
@@ -48,6 +50,7 @@ function loadMenu(){
 	}
 	$("#food-menu").html(data_food)
 	$("#drink-menu").html(data_drink)
+	$("#snack-menu").html(data_snack)
 }
 
 function loadCart(){
