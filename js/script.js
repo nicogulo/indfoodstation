@@ -5,8 +5,8 @@ let menu = [
 	{ id: 4, nama: 'Teh Hangat', kategori: 'drink', harga: 4000, foto: 'tehhangat.jpg'},
 	{ id: 5, nama: 'Teh Lemon', kategori: 'drink', harga: 6000, foto: 'tehlemon.jpg'},
 	{ id: 6, nama: 'Es Jeruk', kategori: 'drink', harga: 5454, foto: 'esjeruk.jpg'},
-	{ id: 6, nama: 'Jus Buah Naga', kategori: 'drink', harga: 5454, foto: 'esbuahnaga.jpg'},
-	{ id: 6, nama: 'Jus Nanas', kategori: 'drink', harga: 5454, foto: 'jusnanas.jpg'}
+	{ id: 7, nama: 'Jus Buah Naga', kategori: 'drink', harga: 5454, foto: 'esbuahnaga.jpg'},
+	{ id: 8, nama: 'Jus Nanas', kategori: 'drink', harga: 5454, foto: 'jusnanas.jpg'}
 ]
 
 let user = {}
