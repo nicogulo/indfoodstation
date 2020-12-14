@@ -57,4 +57,3 @@ function initializeLiff(myLiffId) {
             document.getElementById("liffInitErrorMessage").classList.remove('hidden');
         });
 }
-
