@@ -1,7 +1,7 @@
 let menu = [
-	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 26000, foto: 'nasigoreng.jpg'},
-	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 30000, foto: 'sate.jpg'}
-	{ id: 3, nama: 'Bakso Goreng', kategori: 'food', harga: 23000, foto: 'baksogoreng.jpg'},
+	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 10000, foto: 'nasigoreng.jpg'},
+	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 36363, foto: 'sate.jpg'}
+	// { id: 3, nama: 'Krabby Patty', kategori: 'food', harga: 45454, foto: 'MorningStarVeggieBurger.png'},
 	// { id: 4, nama: 'White Water', kategori: 'drink', harga: 3636, foto: 'NestlePureLifeWater.png'},
 	// { id: 5, nama: 'Cola', kategori: 'drink', harga: 5454, foto: 'CocaCola.png'},
 	// { id: 6, nama: 'Sprite', kategori: 'drink', harga: 5454, foto: 'Sprite.png'},
