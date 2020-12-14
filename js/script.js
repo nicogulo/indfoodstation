@@ -1,12 +1,10 @@
+<<<<<<< HEAD
 let menu = [
-	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 10000, foto: 'nasigoreng.jpg'},
-	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 36363, foto: 'sate.jpg'}
-	// { id: 3, nama: 'Krabby Patty', kategori: 'food', harga: 45454, foto: 'MorningStarVeggieBurger.png'},
-	// { id: 4, nama: 'White Water', kategori: 'drink', harga: 3636, foto: 'NestlePureLifeWater.png'},
-	// { id: 5, nama: 'Cola', kategori: 'drink', harga: 5454, foto: 'CocaCola.png'},
-	// { id: 6, nama: 'Sprite', kategori: 'drink', harga: 5454, foto: 'Sprite.png'},
-	// { id: 7, nama: 'Pancakes', kategori: 'snack', harga: 9090, foto: 'PancakesandSausages.png'},
-	// { id: 8, nama: 'Chicken Nugget', kategori: 'snack', harga: 9090, foto: 'ChickenNuggets.png'}
+	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 15000, foto: 'nasigoreng.jpg'},
+	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 20000, foto: 'sate.jpg'},
+	{ id: 3, nama: 'Es Jeruk', kategori: 'drink', harga: 7000, foto: 'esjeruk.jpg'},
+	{ id: 4, nama: 'Teh Hangat', kategori: 'drink', harga: 4000, foto: 'hangattea.jpg'},
+	{ id: 5, nama: 'Teh Lemon', kategori: 'drink', harga: 6000, foto: 'lemontea.jpg'}
 ]
 
 let user = {}
@@ -44,13 +42,10 @@ function loadMenu(){
 			data_food += menu_item
 		} else if(data_menu[i].kategori == 'drink'){
 			data_drink += menu_item
-		} else if(data_menu[i].kategori == 'snack'){
-			data_snack += menu_item
-		}
+		} 
 	}
 	$("#food-menu").html(data_food)
 	$("#drink-menu").html(data_drink)
-	$("#snack-menu").html(data_snack)
 }
 
 function loadCart(){
@@ -587,4 +582,3 @@ function numToMonth(bulan) {
 // 			{ id: 3, nama: 'Burger Keju', kategori: 'food', harga: 36363, foto: 'DoubleCheeseburger.png', jumlah: 14}
 // 		]
 // 	}
-// ]
