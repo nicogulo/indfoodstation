@@ -2,9 +2,9 @@
 let menu = [
 	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 15000, foto: 'nasigoreng.jpg'},
 	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 20000, foto: 'sate.jpg'},
-	{ id: 4, nama: 'Es Jeruk', kategori: 'drink', harga: 7000, foto: 'esjeruk.jpg'},
-	{ id: 7, nama: 'Teh Hangat', kategori: 'drink', harga: 4000, foto: 'hangattea.jpg'},
-	{ id: 8, nama: 'Teh Lemon', kategori: 'drink', harga: 6000, foto: 'lemontea.jpg'},
+	{ id: 3, nama: 'Es Jeruk', kategori: 'drink', harga: 7000, foto: 'esjeruk.jpg'},
+	{ id: 4, nama: 'Teh Hangat', kategori: 'drink', harga: 4000, foto: 'hangattea.jpg'},
+	{ id: 5, nama: 'Teh Lemon', kategori: 'drink', harga: 6000, foto: 'lemontea.jpg'}
 ]
 
 let user = {}
