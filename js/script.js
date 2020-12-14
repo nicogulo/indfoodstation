@@ -3,10 +3,10 @@ let menu = [
 	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 20000, foto: 'sate.jpg'},
 	{ id: 3, nama: 'Bakso Goreng', kategori: 'food', harga: 16000, foto: 'baksogoreng'},
 	{ id: 4, nama: 'Teh Hangat', kategori: 'drink', harga: 4000, foto: 'tehhangat.jpg'},
-	{ id: 5, nama: 'Teh Lemon', kategori: 'drink', harga: 6000, foto: 'tehlemon'},
-	{ id: 6, nama: 'Sprite', kategori: 'drink', harga: 5454, foto: 'Sprite.png'},
-	{ id: 7, nama: 'Pancakes', kategori: 'snack', harga: 9090, foto: 'PancakesandSausages.png'},
-	{ id: 8, nama: 'Chicken Nugget', kategori: 'snack', harga: 9090, foto: 'ChickenNuggets.png'}
+	{ id: 5, nama: 'Teh Lemon', kategori: 'drink', harga: 6000, foto: 'tehlemon.jpg'},
+	{ id: 6, nama: 'Es Jeruk', kategori: 'drink', harga: 5454, foto: 'esjeruk.jpg'},
+	{ id: 6, nama: 'Jus Buah Naga', kategori: 'drink', harga: 5454, foto: 'esbuahnaga.jpg'},
+	{ id: 6, nama: 'Jus Nanas', kategori: 'drink', harga: 5454, foto: 'jusnanas.jpg'}
 ]
 
 let user = {}
@@ -30,7 +30,6 @@ function loadMenu(){
 	var data_menu = JSON.parse(localStorage.getItem('menu'))
 	var data_food = ''
 	var data_drink = ''
-	var data_snack = ''
 	for (i in data_menu){
 		var menu_item = `<div class="col-6 my-2" onClick="addToCart(`+data_menu[i].id+`)">
 								<div class="menu card">
@@ -45,13 +44,10 @@ function loadMenu(){
 			data_food += menu_item
 		} else if(data_menu[i].kategori == 'drink'){
 			data_drink += menu_item
-		} else if(data_menu[i].kategori == 'snack'){
-			data_snack += menu_item
-		}
+		} 
 	}
 	$("#food-menu").html(data_food)
 	$("#drink-menu").html(data_drink)
-	$("#snack-menu").html(data_snack)
 }
 
 function loadCart(){
