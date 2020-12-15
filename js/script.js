@@ -42,9 +42,11 @@ function loadMenu(){
 							</div>`
 		if(data_menu[i].kategori == 'food'){
 			data_food += menu_item
-		} else (data_menu[i].kategori == 'drink'){
+		} else if(data_menu[i].kategori == 'drink'){
 			data_drink += menu_item
-		} 
+		} else if(data_menu[i].kategori == 'snack'){
+			data_snack += menu_item
+		}
 	}
 	$("#food-menu").html(data_food)
 	$("#drink-menu").html(data_drink)
