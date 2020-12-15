@@ -1,6 +1,6 @@
 let menu = [
-	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 10000, foto: 'nasigoreng.jpg'},
-	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 26000, foto: 'sate.jpg'},
+	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'drink', harga: 10000, foto: 'nasigoreng.jpg'},
+	{ id: 2, nama: 'Sate Madura', kategori: 'drink', harga: 26000, foto: 'sate.jpg'},
 	{ id: 3, nama: 'Bakso Goreng', kategori: 'food', harga: 2000, foto: 'baksogoreng.jpg'},
 	{ id: 4, nama: 'Jus Nanas', kategori: 'drink', harga: 7000, foto: 'jusnanas.jpg'},
 	{ id: 5, nama: 'Jus Jeruk', kategori: 'drink', harga: 5000, foto: 'esjeruk.jpg'},
@@ -311,7 +311,7 @@ function addOrder(){
 		setPage('order')
 
 		// message
-		// Jhonarendra membuat pesanan baru! Burger 2, Pancake 3, Sprite 4 dengan total pesanan Rp 200.000
+
 		var msg_order = ''
 		if (liff.isLoggedIn()) {
 			msg_order += user.displayName + ' membuat pesanan baru! '
