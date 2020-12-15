@@ -13,9 +13,19 @@ let user = {}
 
 function loadData(){
 	setPage('home')
+	initialLoad()
 }
 
-
+function initialLoad(){
+	if (!localStorage.menu){
+		localStorage.setItem('menu', JSON.stringify(menu))
+	}
+	loadProfile()
+	setTimeout(function(){
+		$(".loader").hide()
+	}, 1000)
+	
+}
 function loadMenu(){
 	var data_menu = JSON.parse(localStorage.getItem('menu'))
 	var data_food = ''
@@ -34,8 +44,6 @@ function loadMenu(){
 			data_food += menu_item
 		} else if(data_menu[i].kategori == 'drink'){
 			data_drink += menu_item
-		} else if(data_menu[i].kategori == 'snack'){
-			data_snack += menu_item
 		}
 	}
 	$("#food-menu").html(data_food)
