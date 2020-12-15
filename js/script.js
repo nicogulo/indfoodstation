@@ -69,7 +69,7 @@ function loadCart(){
 								<span class="menu-name">`+cart[i].nama+`</span>
 							</div>
 							<div class="col-3 px-0">
-								<a href="javascript:void(0)" class="btn btn-sm btn-warning btn-cart-action" title="Kurangi" onClick="minNumCart(`+cart[i].id+`)"><i class="fa fa-minus"></i></a>
+								<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-cart-action" title="Kurangi" onClick="minNumCart(`+cart[i].id+`)"><i class="fa fa-minus"></i></a>
 								<span class="px-1">`+cart[i].jumlah+`</span>
 								<a href="javascript:void(0)" class="btn btn-sm btn-success btn-cart-action" title="Tambah" onClick="addNumCart(`+cart[i].id+`)"><i class="fa fa-plus"></i></a>
 								<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-cart-action" title="Hapus" onClick="deleteCart(`+cart[i].id+`)"><i class="fa fa-trash"></i></a>
@@ -92,7 +92,7 @@ function loadCart(){
 		}
 	} else {
 		$("#cart-info").hide()
-		data_cart += `<div class="alert alert-warning">Keranjang anda masih kosong.</div>`
+		data_cart += `<div class="alert alert-danger">Keranjang anda masih kosong.</div>`
 		$("#cart-content").html(data_cart)
 	}
 	
@@ -156,7 +156,7 @@ function loadOrder(){
 						</div>`
 		}
 	} else {
-		data_order += `<div class="alert alert-warning m-2">Belum ada pesanan dari anda</div>`
+		data_order += `<div class="alert alert-danger m-2">Belum ada pesanan dari anda</div>`
 	}
 	$("#order-content").html(data_order)
 }
