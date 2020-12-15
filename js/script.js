@@ -418,7 +418,7 @@ function liffOpenWindow(){
 		$("#modalAlert").modal('show')
 	} else {
 		liff.openWindow({
-	        url: 'https://indfoodstation.herokuapp.com/',
+	        url: 'https://liff.line.me/1655334284-2OQvq4vY',
 	        external: true
 	    })
 	}
