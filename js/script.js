@@ -1,7 +1,7 @@
 let menu = [
 	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 10000, foto: 'nasigoreng.jpg'},
 	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 26000, foto: 'sate.jpg'},
-	{ id: 3, nama: 'Bakso Goreng', kategori: 'food', harga: 2000, foto: 'baksogoreng.jpg'},
+	{ id: 3, nama: 'Bakso Goreng', kategori: 'food', harga: 25000, foto: 'baksogoreng.jpg'},
 	{ id: 4, nama: 'Jus Nanas', kategori: 'drink', harga: 7000, foto: 'jusnanas.jpg'},
 	{ id: 5, nama: 'Jus Jeruk', kategori: 'drink', harga: 5000, foto: 'esjeruk.jpg'},
 	{ id: 6, nama: 'Air Mineral', kategori: 'drink', harga: 4000, foto: 'airmineral.jpg'},
