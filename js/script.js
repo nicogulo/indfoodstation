@@ -13,19 +13,9 @@ let user = {}
 
 function loadData(){
 	setPage('home')
-	initialLoad()
 }
 
-function initialLoad(){
-	if (!localStorage.menu){
-		localStorage.setItem('menu', JSON.stringify(menu))
-	}
-	loadProfile()
-	setTimeout(function(){
-		$(".loader").hide()
-	}, 1000)
-	
-}
+
 function loadMenu(){
 	var data_menu = JSON.parse(localStorage.getItem('menu'))
 	var data_food = ''
