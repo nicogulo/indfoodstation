@@ -50,7 +50,6 @@ function loadMenu(){
 	}
 	$("#food-menu").html(data_food)
 	$("#drink-menu").html(data_drink)
-	$("#snack-menu").html(snack_drink)
 }
 
 function loadCart(){
