@@ -33,7 +33,7 @@ function loadMenu(){
 	for (i in data_menu){
 		var menu_item = `<div class="col-6 my-2" onClick="addToCart(`+data_menu[i].id+`)">
 								<div class="menu card">
-									<img class="card-img-top" src="img/menu/`+data_menu[i].foto+`" alt="Card image cap">
+									<img class="card-img-top" src="img/menu/`+data_menu[i].foto+`" alt="Foodstation">
 									<div class="card-body">
 										<h5 class="menu-name">`+data_menu[i].nama+`</h5>
 										<span class="menu-price">Rp `+formatRupiah(data_menu[i].harga)+`</span>
