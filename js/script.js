@@ -13,7 +13,6 @@ let user = {}
 
 function loadData(){
 	setPage('home')
-	initialLoad()
 }
 
 
