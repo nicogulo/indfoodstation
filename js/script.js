@@ -1,7 +1,7 @@
 let menu = [
 	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 10000, foto: 'nasigoreng.jpg'},
 	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 26000, foto: 'sate.jpg'},
-	{ id: 3, nama: 'Bakso', kategori: 'food', harga: 45454, foto: 'baksogoreng.jpg'}
+	{ id: 3, nama: 'Bakso', kategori: 'food', harga: 45454, foto: 'baksogoreng.jpg'},
 	// { id: 4, nama: 'White Water', kategori: 'drink', harga: 3636, foto: 'NestlePureLifeWater.png'},
 	// { id: 5, nama: 'Cola', kategori: 'drink', harga: 5454, foto: 'CocaCola.png'},
 	// { id: 6, nama: 'Sprite', kategori: 'drink', harga: 5454, foto: 'Sprite.png'},
@@ -13,9 +13,19 @@ let user = {}
 
 function loadData(){
 	setPage('home')
+	initialLoad()
 }
 
-
+function initialLoad(){
+	if (!localStorage.menu){
+		localStorage.setItem('menu', JSON.stringify(menu))
+	}
+	loadProfile()
+	setTimeout(function(){
+		$(".loader").hide()
+	}, 1000)
+	
+}
 function loadMenu(){
 	var data_menu = JSON.parse(localStorage.getItem('menu'))
 	var data_food = ''
