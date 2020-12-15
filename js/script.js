@@ -7,7 +7,7 @@ let menu = [
 	{ id: 6, nama: 'Air Mineral', kategori: 'drink', harga: 4000, foto: 'airmineral.jpg'},
 	{ id: 7, nama: 'Teh Manis', kategori: 'drink', harga: 3000, foto: 'hangattea.jpg'},
 	{ id: 8, nama: 'Teh Lemon', kategori: 'drink', harga: 9090, foto: 'lemontea.jpg'}
-]
+];
 
 let user = {}
 
@@ -42,7 +42,7 @@ function loadMenu(){
 							</div>`
 		if(data_menu[i].kategori == 'food'){
 			data_food += menu_item
-		} else if(data_menu[i].kategori == 'drink'){
+		} else (data_menu[i].kategori == 'drink'){
 			data_drink += menu_item
 		} 
 	}
