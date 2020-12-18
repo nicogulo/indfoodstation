@@ -1,6 +1,30 @@
+:root{
+    --primary-bg: #dc3545;
+    --secondary-bg: #ffffff;
+    --third-bg: #ffffff;
+    --font-pm: #929292;
+    --font-title: #666666;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
   background: #607D8B
 }
+body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--primary-bg);
+  }
+
 .text-brown {
   color: #795548;
 }
@@ -30,13 +54,16 @@ h3.page-title {
 .boxes{
     background: var(--primary-bg);
     width: 100%;
+    height: 150px;
+    margin-top: -20px;
+    margin-bottom: 100px;
+}
+.menu-list{
 
 }
 
 /* swiper js */
-.carousel{
-    
-}
+
 .swiper-container {
     width: 90%;
     height: 150px;
@@ -79,6 +106,7 @@ h3.page-title {
 .search input::placeholder{
     color: #bdbdbd;
 }
+
 
 .menu-wrapper {
   margin: 10px;
