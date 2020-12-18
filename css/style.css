@@ -50,6 +50,11 @@ h3.page-title {
   font-weight: bold;
   padding: 15px 10px;
 }
+.boxes{
+    background: var(--primary-bg);
+    height: 150px;
+    width: 100%;
+}
 
 .boxes{
     background: var(--primary-bg);
@@ -71,6 +76,20 @@ h3.page-title {
     box-shadow: 0px 4px 24px rgba(47, 42, 80, 0.08);
   }
 
+
+.carousel-inner{
+    margin: auto;
+    width: 90%;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px rgba(47, 42, 80, 0.08);
+
+}
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
 .swiper-slide {
     text-align: center;
     font-size: 16px;
@@ -90,6 +109,7 @@ h3.page-title {
     -webkit-align-items: center;
     align-items: center;
 }
+
 
 .search input{
     display: block;
@@ -209,6 +229,8 @@ h3.page-title {
         -webkit-align-items: center;
         align-items: center;
     }
+
+
   }
 
 @media only screen and (min-width:365px) and (max-width: 480px){
@@ -217,11 +239,14 @@ h3.page-title {
         margin: 0 auto;
     }
     
-    /* swiper js */
-    .swiper-container {
-        width: 90%;
-        border-radius: 8px;
-    }
+    .carousel-inner{
+    margin: auto;
+    width: 90%;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px rgba(47, 42, 80, 0.08);
+
+}
 
     .swiper-slide {
         text-align: center;
