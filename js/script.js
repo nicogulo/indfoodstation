@@ -474,7 +474,6 @@ function liffLogout() {
 			liff.logout()
 			window.location.reload()
 		}
-
 	}
 }
 
