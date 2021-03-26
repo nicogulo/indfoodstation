@@ -23,7 +23,7 @@ let menu = [
 	{ id: 7, nama: 'Teh Manis', kategori: 'drink', harga: 3000, foto: 'hangattea.jpg' },
 	{ id: 8, nama: 'Teh Lemon', kategori: 'drink', harga: 9090, foto: 'lemontea.jpg' }
 ]
-
+localStorage.clear()
 let user = {}
 
 function loadData() {
@@ -37,7 +37,7 @@ function initialLoad() {
 	}
 	loadProfile()
 	setTimeout(function () {
-		$(".loader").hide()
+		$(".preloader").hide()
 	}, 1000)
 
 }
@@ -46,15 +46,23 @@ function loadMenu() {
 	var data_food = ''
 	var data_drink = ''
 	for (i in data_menu) {
-		var menu_item = `<div class="col-6 my-2" onClick="addToCart(` + data_menu[i].id + `)">
-								<div class="menu card">
-									<img class="card-img-top" src="img/menu/`+ data_menu[i].foto + `" alt="Foodstation">
-									<div class="card-body">
-										<h5 class="menu-name">`+ data_menu[i].nama + `</h5>
-										<span class="menu-price">Rp `+ formatRupiah(data_menu[i].harga) + `</span>
-									</div>
-								</div>
-							</div>`
+		var menu_item = `	<div class="card border-warning mb-3 col-11 mx-auto rounded my-2 p-3" onClick="addToCart(` + data_menu[i].id + `)">
+		<div class="d-flex justify-content-start align-items-center">
+			<div class="col-sm-4">
+				<img src="img/menu/` + data_menu[i].foto + `" style="width: 120px; background-color: #FFEFDF;" class="card-img img-fluid" alt="card image">
+				
+			</div>
+		<div class="col-sm-8">
+				<p class="menu-name">` + data_menu[i].nama + `</p>
+				<p class="detail">` + data_menu[i].detail + `</p>
+				<span class="menu-price">Rp. ` + formatRupiah(data_menu[i].harga) + `</span>
+			
+				<a class="btn btn-warning float-right btn-tambah">
+				<i class="fas fa-plus"></i>
+				</a>
+		</div>
+	</div>
+</div>`
 		if (data_menu[i].kategori == 'food') {
 			data_food += menu_item
 		} else if (data_menu[i].kategori == 'drink') {
@@ -75,20 +83,29 @@ function loadCart() {
 		$("#cart-info").show()
 		for (i in cart) {
 			var nominal = cart[i].jumlah * cart[i].harga
-			data_cart += `<div class="cart-item row my-1">
-							<div class="col-6 pr-0">
-								<span class="menu-name">`+ cart[i].nama + `</span>
-							</div>
-							<div class="col-3 px-0">
-								<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-cart-action" title="Kurangi" onClick="minNumCart(`+ cart[i].id + `)"><i class="fa fa-minus"></i></a>
-								<span class="px-1">`+ cart[i].jumlah + `</span>
-								<a href="javascript:void(0)" class="btn btn-sm btn-success btn-cart-action" title="Tambah" onClick="addNumCart(`+ cart[i].id + `)"><i class="fa fa-plus"></i></a>
-								<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-cart-action" title="Hapus" onClick="deleteCart(`+ cart[i].id + `)"><i class="fa fa-trash"></i></a>
-							</div>
-							<div class="col-3 pl-0 text-right">
-								`+ formatRupiah(nominal) + `
-							</div>
-						</div>`
+			data_cart += `<div class="col-12 text-center">
+			<img src="img/menu/` + cart[i].foto + `" style="width: 80%" class="card-img img-fluid pt-2" alt="card image">
+		</div>
+		<div class="cart-item row my-1">
+			<div class="col-6 text-left" style="padding-left:30px;">
+				<span class="menu-name">` + cart[i].nama + `</span>
+			</div>
+
+			<div class="col-6 text-right" style="padding-right:30px;">
+				` + formatRupiah(nominal) + `
+
+			</div>
+		</div>
+
+		<div class="col-12 pl-0 text-right">
+			<a href="javascript:void(0)" class="btn btn-sm btn-warning btn-cart-action" title="Kurangi"
+				onClick="minNumCart(` + cart[i].id + `)"><i class="fa fa-minus"></i></a>
+			<span class="px-1">` + cart[i].jumlah + `</span>
+			<a href="javascript:void(0)" class="btn btn-sm btn-warning btn-cart-action" title="Tambah"
+				onClick="addNumCart(` + cart[i].id + `)"><i class="fa fa-plus"></i></a>
+			<a href="javascript:void(0)" class="btn btn-sm btn-warning btn-cart-action" title="Hapus"
+				onClick="deleteCart(` + cart[i].id + `)"><i class="fa fa-trash"></i></a>
+		</div>`
 			total_cart = total_cart + nominal
 
 			$("#cart-content").html(data_cart)
@@ -167,7 +184,12 @@ function loadOrder() {
 						</div>`
 		}
 	} else {
-		data_order += `<div class="alert alert-danger m-2">Belum ada pesanan dari anda</div>`
+		data_order += `
+		<div class="pt-5 text-center" style="position:absolute; top50%; left:50%; transform: translate(-50%, 50%);">
+		<img src="img/history.png" class="mx-auto d-block">		
+		<h5 class="mt-2">Belum ada pesanan</h5>
+		<p>Yuk order dulu</p>
+		</div>`
 	}
 	$("#order-content").html(data_order)
 }
