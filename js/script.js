@@ -1,17 +1,6 @@
-// swiper
-/* var mySwiper = new Swiper('.swiper-container', {
-	direction: 'horizontal',
-	loop: true,
-	pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: true,
-			},
-	navigation: {
-	nextEl: '.swiper-button-next',
-	prevEl: '.swiper-button-prev',
-},
-	})
- */
+
+
+	
 
 let menu = [
 	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 18000, foto: 'nasigoreng.jpg' },

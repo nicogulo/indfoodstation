@@ -84,8 +84,7 @@ h3.page-title {
 }
 
 .button-home{
-  
-  margin: 0 5px;
+  margin: 0 15px;
   width: 120px;
   height: 36px;
 }
@@ -133,6 +132,11 @@ h3.page-title {
 .menu.card .card-body {
   padding: 0.5rem;
 }
+.card-img-top{
+  height: 150px;
+  width: 200px;
+}
+
 .cart-badge {
   font-size: 0.5em;
   position: absolute;
