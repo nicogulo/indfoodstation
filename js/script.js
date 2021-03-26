@@ -441,10 +441,10 @@ function clearTransaction() {
 function liffOpenWindow() {
 	if (!liff.isInClient()) {
 		$("#modal-message").html('Fungsi ini tidak tersedia pada browser eksternal')
-		$("#modalAlert").modal('show')iniiiiiiiii
+		$("#modalAlert").modal('show')
 	} else {
 		liff.openWindow({
-			url: 'https://foodcourtbynic.herokuapp.com/',
+			url: 'https://foodcourtbynic.herokuapp.com',
 			external: true
 		})
 	}
