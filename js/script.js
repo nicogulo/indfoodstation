@@ -8,7 +8,7 @@ let menu = [
 	{ id: 7, nama: 'Teh Manis', kategori: 'drink', harga: 3000, foto: 'hangattea.jpg' },
 	{ id: 8, nama: 'Teh Lemon', kategori: 'drink', harga: 9090, foto: 'lemontea.jpg' }
 ]
-localStorage.clear()
+
 let user = {}
 
 function loadData() {
