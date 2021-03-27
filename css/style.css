@@ -94,7 +94,7 @@ h3.page-title {
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
-  background-color: #FFBA00;
+  background-color: var(--primary-bg)
   border: none;
   color: #fff;
   text-align: center;
