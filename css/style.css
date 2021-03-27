@@ -314,11 +314,28 @@ border-radius: 100%;
     width: 100%
   }
 }
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 600px) and (min-width:400px){
     .container{
         width: 100%;
         margin: 0 auto;
     }
+    .menu-list{
+      padding-bottom: 100px;
+    }
+    .button-home{
+      margin: 0 10px;
+      width: 100px;
+      height: 36px;
+    }
+    .card-img-top{
+      height: 150px;
+      width: 160px;
+    }
+     .menu-list{
+      padding-bottom: 100px;
+    }
+   
+    
      /* swiper js */
     .swiper-container {
         width: 90%;
@@ -348,7 +365,7 @@ border-radius: 100%;
 
   }
 
-@media only screen and (min-width:365px) and (max-width: 480px){
+@media only screen and (max-width: 376px){
     .container{
         width: 100%;
         margin: 10px auto;
@@ -358,13 +375,14 @@ border-radius: 100%;
       width: 100px;
       height: 36px;
     }
+    .card-img-top{
+      height: 150px;
+      width: 147px;
+    }
     .menu-list{
       padding-bottom: 100px;
     }
-    .card-img-top{
-      height: 150px;
-      width: 147.9px;
-    }
+   
     
     .carousel-inner{
     margin: auto;
