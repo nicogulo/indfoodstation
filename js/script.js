@@ -1,7 +1,3 @@
-
-
-	
-
 let menu = [
 	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 18000, foto: 'nasigoreng.jpg' },
 	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 26000, foto: 'sate.jpg' },
