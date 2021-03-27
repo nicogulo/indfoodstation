@@ -88,7 +88,7 @@ function loadCart() {
 			<span class="px-1">` + cart[i].jumlah + `</span>
 			<a href="javascript:void(0)" class="btn btn-sm btn-warning btn-cart-action" title="Tambah"
 				onClick="addNumCart(` + cart[i].id + `)"><i class="fa fa-plus"></i></a>
-			<a href="javascript:void(0)" class="btn btn-sm btn-warning btn-cart-action" title="Hapus"
+			<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-cart-action" title="Hapus"
 				onClick="deleteCart(` + cart[i].id + `)"><i class="fa fa-trash"></i></a>
 		</div>`
 			total_cart = total_cart + nominal

@@ -8,7 +8,8 @@
 	<link rel="icon" href="logo.ico" type="image/x-icon">
 	<title>Food Court - Semanan</title>
 	<meta name="description" content="Food Court Semanan.">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="preload" href="css/style.css" as="style">
 	<link rel="preload" href="js/script.js" as="script">
 	<link href="css/fontawesome.min.css" rel="stylesheet">
@@ -99,7 +100,9 @@
 					<div class="row m-2 menu-list text-center">
 						<div class="col-6 my-2" onclick="setPage('menu')">
 							<div class="menu card">
-								<img class="card-img-top" src="img/menu/sate.jpg" alt="Card image cap">
+								<a href="#food">
+									<img class="card-img-top" src="img/menu/sate.jpg" alt="Card image cap">
+								</a>
 								<div class="card-body">
 									<h5 class="menu-name">Makanan</h5>
 								</div>
@@ -107,7 +110,9 @@
 						</div>
 						<div class="col-6 my-2" onclick="setPage('menu')">
 							<div class="menu card">
+								<a href="#drink">
 								<img class="card-img-top" src="img/menu/jusnanas.jpg" alt="Card image cap">
+							</a>
 								<div class="card-body">
 									<h5 class="menu-name">Minuman</h5>
 								</div>
@@ -127,13 +132,13 @@
 					<div class="col-4 text-right">
 						<div class="cart-wrapper mt-3 py-3 pr-3" onclick="setPage('cart')" style="position: relative;">
 							<i class="fas fa-shopping-cart"></i>
-							<span id="cart_num_menu" class="badge badge-danger cart-badge">3</span>
+							<span id="cart_num_menu" class="badge badge-warning cart-badge">3</span>
 						</div>
 					</div>
 				</div>
 				<div class="menu-wrapper">
 					<div class="menu-section-title">
-						<span>Food</span>
+						<span id="food">Food</span>
 					</div>
 					<div id="food-menu" class="menu-item row">
 					</div>
@@ -141,7 +146,7 @@
 
 				<div class="menu-wrapper">
 					<div class="menu-section-title">
-						<span>Drink</span>
+						<span id="drink">Drink</span>
 					</div>
 					<div id="drink-menu" class="menu-item row">
 					</div>
@@ -233,7 +238,7 @@
 						</p>
 					</div>
 					<div class="col-10 pl-0">
-						<h3 class="text-danger page-title mt-3">CART</h3>
+						<h3 class="text-warning page-title mt-3">CART</h3>
 					</div>
 				</div>
 
@@ -262,7 +267,7 @@
 								<b>TOTAL BAYAR</b>
 							</div>
 							<div class="col-3 text-right">
-								<b><span id="total-bayar" class="text-success"></span></b>
+								<b><span id="total-bayar" class="text-warning"></span></b>
 							</div>
 						</div>
 					</div>
@@ -272,12 +277,12 @@
 				<div class="row">
 					<div class="col-2 pr-0">
 						<p class="mt-3 btn-back">
-							<a href="javascript:void(0)" onclick="setPage('order')" class="text-danger"><i
+							<a href="javascript:void(0)" onclick="setPage('order')" class="text-warning"><i
 									class="fas fa-arrow-left"></i></a>
 						</p>
 					</div>
 					<div class="col-10 pl-0">
-						<h3 class="text-danger page-title mt-3">ORDER DETAIL</h3>
+						<h3 class="text-warning page-title mt-3">ORDER DETAIL</h3>
 					</div>
 				</div>
 
