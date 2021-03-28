@@ -52,7 +52,6 @@ body::-webkit-scrollbar-thumb {
 }
 .slider{
   margin: auto;
-  padding-right: 10px;
   width: 90%;
   height: 150px;
   border-radius: 8px;
@@ -71,7 +70,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .slider img{
-  
+  margin: auto;
   width: 90%;
   height: 150px;
   border-radius: 8px;
