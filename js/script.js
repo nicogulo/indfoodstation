@@ -1,12 +1,59 @@
-let menu = [
-	{ id: 1, nama: 'Nasi Goreng Padang', kategori: 'food', harga: 18000, foto: 'nasigoreng.jpg' },
-	{ id: 2, nama: 'Sate Madura', kategori: 'food', harga: 26000, foto: 'sate.jpg' },
-	{ id: 3, nama: 'Bakso Goreng', kategori: 'food', harga: 25000, foto: 'baksogoreng.jpg' },
-	{ id: 4, nama: 'Jus Nanas', kategori: 'drink', harga: 7000, foto: 'jusnanas.jpg' },
-	{ id: 5, nama: 'Jus Jeruk', kategori: 'drink', harga: 5000, foto: 'esjeruk.jpg' },
-	{ id: 6, nama: 'Air Mineral', kategori: 'drink', harga: 4000, foto: 'airmineral.jpg' },
-	{ id: 7, nama: 'Teh Manis', kategori: 'drink', harga: 3000, foto: 'hangattea.jpg' },
-	{ id: 8, nama: 'Teh Lemon', kategori: 'drink', harga: 9090, foto: 'lemontea.jpg' }
+let menu = [{
+		id: 1,
+		nama: 'Nasi Goreng Padang',
+		kategori: 'food',
+		harga: 18000,
+		foto: 'nasigoreng.jpg'
+	},
+	{
+		id: 2,
+		nama: 'Sate Madura',
+		kategori: 'food',
+		harga: 26000,
+		foto: 'sate.jpg'
+	},
+	{
+		id: 3,
+		nama: 'Bakso Goreng',
+		kategori: 'food',
+		harga: 25000,
+		foto: 'baksogoreng.jpg'
+	},
+	{
+		id: 4,
+		nama: 'Jus Nanas',
+		kategori: 'drink',
+		harga: 7000,
+		foto: 'jusnanas.jpg'
+	},
+	{
+		id: 5,
+		nama: 'Jus Jeruk',
+		kategori: 'drink',
+		harga: 5000,
+		foto: 'esjeruk.jpg'
+	},
+	{
+		id: 6,
+		nama: 'Air Mineral',
+		kategori: 'drink',
+		harga: 4000,
+		foto: 'airmineral.jpg'
+	},
+	{
+		id: 7,
+		nama: 'Teh Manis',
+		kategori: 'drink',
+		harga: 3000,
+		foto: 'hangattea.jpg'
+	},
+	{
+		id: 8,
+		nama: 'Teh Lemon',
+		kategori: 'drink',
+		harga: 9090,
+		foto: 'lemontea.jpg'
+	}
 ]
 
 let user = {}
@@ -24,8 +71,30 @@ function initialLoad() {
 	setTimeout(function () {
 		$(".preloader").hide()
 	}, 1000)
-
 }
+// slider
+$(document).ready(function () {
+	$('.slider').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 2500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+});
+
+$(document).ready(function () {
+	$('.slider-btn').slick({
+		centerMode: true,
+		centerPadding: '60px',
+		dots: true,
+		autoplaySpeed: 2500,
+
+		arrows: true
+	});
+});
+
+
 function loadMenu() {
 	var data_menu = JSON.parse(localStorage.getItem('menu'))
 	var data_food = ''
@@ -144,24 +213,24 @@ function loadOrder() {
 								<div class="card-body">
 									<div class="row">
 										<div class="col-3">
-											<img src="img/menu/`+ order[i].menu[0].foto + `" class="img-fluid">
+											<img src="img/menu/` + order[i].menu[0].foto + `" class="img-fluid">
 										</div>
 										<div class="col-9">
-											<h5 class="menu-name">`+ order[i].menu[0].nama + `</h5>
-											<p class="menu-price text-right">Rp `+ formatRupiah(order[i].menu[0].harga) + ` x ` + order[i].menu[0].jumlah + `</p>
+											<h5 class="menu-name">` + order[i].menu[0].nama + `</h5>
+											<p class="menu-price text-right">Rp ` + formatRupiah(order[i].menu[0].harga) + ` x ` + order[i].menu[0].jumlah + `</p>
 											<hr class="m-0" />
-											<p class="text-right"><small>`+ order[i].menu.length + ` Item</small></p>
+											<p class="text-right"><small>` + order[i].menu.length + ` Item</small></p>
 										</div>
 
 										<div class="col-8 text-right">
 											<b>TOTAL</b>
 										</div>
 										<div class="col-4 text-right">
-											Rp `+ formatRupiah(total_bayar) + `
+											Rp ` + formatRupiah(total_bayar) + `
 										</div>
 
 										<div class="col-12">
-											<small><i>Dipesan pada <b>`+ date + `</b></i></small>
+											<small><i>Dipesan pada <b>` + date + `</b></i></small>
 										</div>
 									</div>
 								</div>
@@ -403,16 +472,16 @@ function showOrder(id) {
 		total_order_detail = total_order_detail + nominal
 		data_order_detail += `<div class="order-detail-item row my-1">
 								<div class="col-4 pr-0">
-									<span class="menu-name">`+ order_item.menu[i].nama + `</span>
+									<span class="menu-name">` + order_item.menu[i].nama + `</span>
 								</div>
 								<div class="col-3 px-0 text-right">
-									<span class="px-1">`+ formatRupiah(order_item.menu[i].harga) + `</span>
+									<span class="px-1">` + formatRupiah(order_item.menu[i].harga) + `</span>
 								</div>
 								<div class="col-2 px-0">
-									<span class="px-1"> x `+ order_item.menu[i].jumlah + `</span>
+									<span class="px-1"> x ` + order_item.menu[i].jumlah + `</span>
 								</div>
 								<div class="col-3 pl-0 text-right">
-									`+ formatRupiah(nominal) + `
+									` + formatRupiah(nominal) + `
 								</div>
 							</div>`
 	}
@@ -566,19 +635,42 @@ function formatRupiah(angka) {
 
 function numToMonth(bulan) {
 	switch (bulan) {
-		case 1: bulan = "Januari"; break
-		case 2: bulan = "Februari"; break
-		case 3: bulan = "Maret"; break
-		case 4: bulan = "April"; break
-		case 5: bulan = "Mei"; break
-		case 6: bulan = "Juni"; break
-		case 7: bulan = "Juli"; break
-		case 8: bulan = "Agustus"; break
-		case 9: bulan = "September"; break
-		case 10: bulan = "Oktober"; break
-		case 11: bulan = "November"; break
-		case 12: bulan = "Desember"; break
+		case 1:
+			bulan = "Januari";
+			break
+		case 2:
+			bulan = "Februari";
+			break
+		case 3:
+			bulan = "Maret";
+			break
+		case 4:
+			bulan = "April";
+			break
+		case 5:
+			bulan = "Mei";
+			break
+		case 6:
+			bulan = "Juni";
+			break
+		case 7:
+			bulan = "Juli";
+			break
+		case 8:
+			bulan = "Agustus";
+			break
+		case 9:
+			bulan = "September";
+			break
+		case 10:
+			bulan = "Oktober";
+			break
+		case 11:
+			bulan = "November";
+			break
+		case 12:
+			bulan = "Desember";
+			break
 	}
 	return bulan
 }
-
