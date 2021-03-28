@@ -83,16 +83,16 @@ $(document).ready(function () {
 	});
 });
 
-$(document).ready(function () {
-	$('.slider-btn').slick({
-		centerMode: true,
-		centerPadding: '60px',
-		dots: true,
-		autoplaySpeed: 2500,
+// $(document).ready(function () {
+// 	$('.slider-btn').slick({
+// 		centerMode: true,
+// 		centerPadding: '60px',
+// 		dots: true,
+// 		autoplaySpeed: 2500,
 
-		arrows: true
-	});
-});
+// 		arrows: true
+// 	});
+// });
 
 
 function loadMenu() {
