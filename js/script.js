@@ -58,6 +58,77 @@ let menu = [{
 
 let user = {}
 
+function setPage(menu) {
+	if (menu == "home") {
+		loadCart()
+		$('#home').show()
+		$('#menu').hide()
+		$('#order').hide()
+		$('#account').hide()
+		$('#cart').hide()
+		$('#order-detail').hide()
+
+		$('#nav').show()
+		$('#order-btn').hide()
+	} else if (menu == "menu") {
+		loadMenu()
+		loadCart()
+		$('#home').hide()
+		$('#menu').show()
+		$('#order').hide()
+		$('#account').hide()
+		$('#cart').hide()
+		$('#order-detail').hide()
+
+		$('#nav').show()
+		$('#order-btn').hide()
+	} else if (menu == "order") {
+		loadOrder()
+		$('#home').hide()
+		$('#menu').hide()
+		$('#order').show()
+		$('#account').hide()
+		$('#cart').hide()
+		$('#order-detail').hide()
+
+		$('#nav').show()
+		$('#order-btn').hide()
+	} else if (menu == "account") {
+		loadProfile()
+		$('#home').hide()
+		$('#menu').hide()
+		$('#order').hide()
+		$('#account').show()
+		$('#cart').hide()
+		$('#order-detail').hide()
+
+		$('#nav').show()
+		$('#order-btn').hide()
+	} else if (menu == "cart") {
+		loadCart()
+		$('#home').hide()
+		$('#menu').hide()
+		$('#order').hide()
+		$('#account').hide()
+		$('#cart').show()
+		$('#order-detail').hide()
+
+		$('#nav').hide()
+		$('#order-btn').show()
+	} else if (menu == "order-detail") {
+		loadCart()
+		$('#home').hide()
+		$('#menu').hide()
+		$('#order').hide()
+		$('#account').hide()
+		$('#cart').hide()
+		$('#order-detail').show()
+
+		$('#nav').hide()
+		$('#order-btn').hide()
+	}
+}
+
 function loadData() {
 	setPage('home')
 	initialLoad()
@@ -425,6 +496,8 @@ function addOrder() {
 			}
 
 		}
+
+		
 		var ppn = parseInt(total_pesanan * 10 / 100)
 		var total_bayar = total_pesanan + ppn
 		msg_order += ' dengan total pesanan Rp ' + formatRupiah(total_bayar) + '. Terima kasih banyak!'
@@ -509,7 +582,7 @@ function liffOpenWindow() {
 		$("#modalAlert").modal('show')
 	} else {
 		liff.openWindow({
-			url: 'https://liff.line.me/1655334284-2OQvq4vY',
+			url: 'https://liff.line.me/1655801536-RlMGz8oK',
 			external: true
 		})
 	}
@@ -542,76 +615,6 @@ function liffLogout() {
 	}
 }
 
-function setPage(menu) {
-	if (menu == "home") {
-		loadCart()
-		$('#home').show()
-		$('#menu').hide()
-		$('#order').hide()
-		$('#account').hide()
-		$('#cart').hide()
-		$('#order-detail').hide()
-
-		$('#nav').show()
-		$('#order-btn').hide()
-	} else if (menu == "menu") {
-		loadMenu()
-		loadCart()
-		$('#home').hide()
-		$('#menu').show()
-		$('#order').hide()
-		$('#account').hide()
-		$('#cart').hide()
-		$('#order-detail').hide()
-
-		$('#nav').show()
-		$('#order-btn').hide()
-	} else if (menu == "order") {
-		loadOrder()
-		$('#home').hide()
-		$('#menu').hide()
-		$('#order').show()
-		$('#account').hide()
-		$('#cart').hide()
-		$('#order-detail').hide()
-
-		$('#nav').show()
-		$('#order-btn').hide()
-	} else if (menu == "account") {
-		loadProfile()
-		$('#home').hide()
-		$('#menu').hide()
-		$('#order').hide()
-		$('#account').show()
-		$('#cart').hide()
-		$('#order-detail').hide()
-
-		$('#nav').show()
-		$('#order-btn').hide()
-	} else if (menu == "cart") {
-		loadCart()
-		$('#home').hide()
-		$('#menu').hide()
-		$('#order').hide()
-		$('#account').hide()
-		$('#cart').show()
-		$('#order-detail').hide()
-
-		$('#nav').hide()
-		$('#order-btn').show()
-	} else if (menu == "order-detail") {
-		loadCart()
-		$('#home').hide()
-		$('#menu').hide()
-		$('#order').hide()
-		$('#account').hide()
-		$('#cart').hide()
-		$('#order-detail').show()
-
-		$('#nav').hide()
-		$('#order-btn').hide()
-	}
-}
 
 function formatRupiah(angka) {
 	var angka = angka.toString()
